@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Scheme Test Page</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        button { 
+            display: block; width: 100%; padding: 15px; margin-bottom: 10px; 
+            font-size: 16px; cursor: pointer; background-color: #007bff; 
+            color: white; border: none; border-radius: 8px;
+        }
+        button:active { background-color: #0056b3; }
+        .info { background: #f4f4f4; padding: 10px; border-radius: 5px; margin-bottom: 20px; font-size: 14px; }
+        h2 { font-size: 1.2rem; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>앱 스킴 테스트</h1>
+    <div class="info">
+        <strong>등록된 설정:</strong><br>
+        Scheme: <code>dbcmapp</code> / Host: <code>open</code>
+    </div>
+
+    <h2>Case 1: Scheme만 호출</h2>
+    <p>주소: <code>dbcmapp://</code></p>
+    <button onclick="location.href='dbcmapp://'">Case 1 실행</button>
+
+    <h2>Case 2: Scheme + 정해진 Host 호출</h2>
+    <p>주소: <code>dbcmapp://open</code></p>
+    <button onclick="location.href='dbcmapp://open'">Case 2 실행 (정상 케이스)</button>
+
+    <h2>Case 3: Scheme + 다른 Host 호출</h2>
+    <p>주소: <code>dbcmapp://aaa</code></p>
+    <button onclick="location.href='dbcmapp://aaa'">Case 3 실행</button>
+
+    <hr>
+    <p style="color: gray; font-size: 12px;">
+        * 앱이 설치되어 있지 않으면 반응이 없거나 브라우저 에러가 뜰 수 있습니다.
+    </p>
+
+</body>
+</html>
